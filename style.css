@@ -15,13 +15,12 @@ body {
     background: var(--body-background-color);
 }
 
-#intro {
-    color: var(--color-bright);
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
 }
 
 html,
@@ -535,6 +534,14 @@ section .title::after {
     ;
 }
 
+.services .serv-content .boxx .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .boxx:hover .box {
+    transform: scale(1.05);
+}
+
 .services .serv-content .card .box {
     transition: all 0.3s ease;
 }
@@ -773,7 +780,7 @@ section .title::after {
 /* contact section styling */
 
 .contact .title::after {
-    content: "get in touch";
+    content: "";
 }
 
 .contact .contact-content .column {
@@ -995,6 +1002,10 @@ footer span a:hover {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .services .serv-content .boxx {
+        width: calc(101% - 0px);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column,
     .contact .contact-content .column {
         width: 100%;
@@ -1005,7 +1016,7 @@ footer span a:hover {
 @media (max-width: 690px) {
     .home {
         display: flex;
-        background: rgb(97, 97, 97);
+        background: rgb(0, 0, 0);
         height: 90vh;
         color: #fff;
         padding-bottom: 0%;
@@ -1040,6 +1051,11 @@ footer span a:hover {
 }
 
 @media (max-width: 500px) {
+    #contact-info .links {
+        display: flex;
+        min-width: 320px;
+        justify-content: space-between;
+    }
     .navbar .menu li a {
         display: block;
         color: #fff;
